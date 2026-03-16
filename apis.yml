@@ -1,96 +1,66 @@
+aid: autodesk-powermill
 name: Autodesk PowerMill API
-description: APIs for Autodesk PowerMill, a leading CAM software solution for high-speed and 5-axis machining
-image: https://www.autodesk.com/products/powermill/overview
+description: >-
+  Autodesk PowerMill is a leading CAM software solution for high-speed and
+  5-axis machining. It provides APIs for automating manufacturing workflows,
+  including macro, Python, .NET, and COM interfaces for programmatic control
+  of CNC toolpaths and machining operations.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- CAM
-- Manufacturing
-- CNC
-- Machining
-- CAD/CAM
-- Automation
-- 5-axis
-created: '2024'
-modified: '2024'
-url: https://www.autodesk.com/products/powermill/overview
-specificationVersion: '0.18'
+  - CAM
+  - Manufacturing
+  - CNC
+  - Machining
+  - 5-axis
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/autodesk-powermill/refs/heads/main/apis.yml
+created: '2024-01-01'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 apis:
-- name: PowerMill Macro API
-  description: Automation interface using macro commands to control PowerMill operations and workflows
-  image: https://www.autodesk.com/products/powermill/overview
-  humanURL: https://www.autodesk.com/products/powermill/overview
-  baseURL: https://local-powermill-instance
-  tags:
-  - Macros
-  - Automation
-  - Scripting
-  properties:
+  - aid: autodesk-powermill:powermill-macro-api
+    name: PowerMill Macro API
+    description: >-
+      Automation interface using macro commands to control PowerMill operations
+      and workflows for CNC machining automation.
+    humanURL: https://www.autodesk.com/products/powermill/overview
+    baseURL: https://local-powermill-instance
+    tags:
+      - Macros
+      - Automation
+      - Scripting
+    properties:
+      - type: Documentation
+        url: https://help.autodesk.com/view/PWRML/2024/ENU/
+  - aid: autodesk-powermill:powermill-python-api
+    name: PowerMill Python API
+    description: >-
+      Python-based API for automating PowerMill processes and customizing
+      machining workflows.
+    humanURL: https://www.autodesk.com/products/powermill/overview
+    tags:
+      - Python
+      - Automation
+      - Scripting
+    properties:
+      - type: Documentation
+        url: https://help.autodesk.com/view/PWRML/2024/ENU/
+common:
+  - type: Website
+    url: https://www.autodesk.com/products/powermill/overview
   - type: Documentation
     url: https://help.autodesk.com/view/PWRML/2024/ENU/
-  - type: API Reference
-    url: https://help.autodesk.com/view/PWRML/2024/ENU/?guid=GUID-Macro_Programming
-- name: PowerMill Python API
-  description: Python-based API for automating PowerMill processes and customizing workflows
-  image: https://www.autodesk.com/products/powermill/overview
-  humanURL: https://www.autodesk.com/products/powermill/overview
-  baseURL: https://local-powermill-instance
-  tags:
-  - Python
-  - Automation
-  - Scripting
-  - Programming
-  properties:
-  - type: Documentation
-    url: https://help.autodesk.com/view/PWRML/2024/ENU/?guid=GUID-Python_Scripting
-  - type: GitHub
-    url: https://github.com/Autodesk/
-  - type: Examples
-    url: https://help.autodesk.com/view/PWRML/2024/ENU/?guid=GUID-Python_Examples
-- name: PowerMill .NET API
-  description: .NET Framework API for integrating PowerMill with custom Windows applications
-  image: https://www.autodesk.com/products/powermill/overview
-  humanURL: https://www.autodesk.com/products/powermill/overview
-  baseURL: https://local-powermill-instance
-  tags:
-  - .NET
-  - Windows
-  - Integration
-  - C#
-  properties:
-  - type: Documentation
-    url: https://help.autodesk.com/view/PWRML/2024/ENU/?guid=GUID-NET_API
-  - type: SDK
-    url: https://www.autodesk.com/developer-network/platform-technologies/powermill
-- name: PowerMill COM API
-  description: Component Object Model interface for programmatic access to PowerMill functionality
-  image: https://www.autodesk.com/products/powermill/overview
-  humanURL: https://www.autodesk.com/products/powermill/overview
-  baseURL: https://local-powermill-instance
-  tags:
-  - COM
-  - Automation
-  - Windows
-  - Legacy
-  properties:
-  - type: Documentation
-    url: https://help.autodesk.com/view/PWRML/2024/ENU/?guid=GUID-COM_API
+  - type: Developer Portal
+    url: https://www.autodesk.com/developer-network
+  - type: Support
+    url: https://www.autodesk.com/support
+  - type: Terms of Service
+    url: https://www.autodesk.com/company/terms-of-use
+  - type: Privacy Policy
+    url: https://www.autodesk.com/company/legal-notices-trademarks/privacy-statement
+  - type: GitHub Organization
+    url: https://github.com/autodesk-platform-services
 maintainers:
-- name: Autodesk
-  email: developer.support@autodesk.com
-  url: https://www.autodesk.com
-common:
-- type: Developer Portal
-  url: https://www.autodesk.com/developer-network
-- type: Support
-  url: https://www.autodesk.com/support
-- type: Forums
-  url: https://forums.autodesk.com/t5/powermill-forum/bd-p/123
-- type: Knowledge Base
-  url: https://knowledge.autodesk.com/support/powermill
-- type: Downloads
-  url: https://www.autodesk.com/products/powermill/free-trial
-- type: Training
-  url: https://www.autodesk.com/training
-- type: Terms of Service
-  url: https://www.autodesk.com/company/terms-of-use
-- type: Privacy Policy
-  url: https://www.autodesk.com/company/legal-notices-trademarks/privacy-statement
+  - FN: Kin Lane
+    email: kin@apievangelist.com
