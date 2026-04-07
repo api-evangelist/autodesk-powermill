@@ -8,11 +8,11 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
+  - 5-Axis
   - CAM
-  - Manufacturing
   - CNC
   - Machining
-  - 5-axis
+  - Manufacturing
 url: >-
   https://raw.githubusercontent.com/api-evangelist/autodesk-powermill/refs/heads/main/apis.yml
 created: '2024-01-01'
@@ -27,8 +27,8 @@ apis:
     humanURL: https://www.autodesk.com/products/powermill/overview
     baseURL: https://local-powermill-instance
     tags:
-      - Macros
       - Automation
+      - Macros
       - Scripting
     properties:
       - type: Documentation
@@ -40,8 +40,8 @@ apis:
       machining workflows.
     humanURL: https://www.autodesk.com/products/powermill/overview
     tags:
-      - Python
       - Automation
+      - Python
       - Scripting
     properties:
       - type: Documentation
