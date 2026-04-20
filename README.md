@@ -1,92 +1,107 @@
-# Autodesk PowerMill API (autodesk-powermill)
-APIs for Autodesk PowerMill, a leading CAM software solution for high-speed and 5-axis machining
+# Autodesk PowerMill (autodesk-powermill)
 
-**URL:** [Visit APIs.json URL](https://www.autodesk.com/products/powermill/overview)
+Autodesk PowerMill is a leading CAM (Computer-Aided Manufacturing) software solution for high-speed and 5-axis CNC machining. It is used by aerospace, automotive, mold and die, and precision engineering industries to generate toolpaths for complex part manufacturing. PowerMill provides multiple programming interfaces including Macro scripts, Python API, and .NET/COM interfaces for automating manufacturing workflows, customizing toolpath generation, and integrating with broader manufacturing execution systems.
+
+**URL:** [https://raw.githubusercontent.com/api-evangelist/autodesk-powermill/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/autodesk-powermill/refs/heads/main/apis.yml)
+
+**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
 
 ## Tags:
 
- - CAM, Manufacturing, CNC, Machining, CAD/CAM, Automation, 5-axis
+ - 5-Axis Machining, CAM, CNC, Machining, Manufacturing, Aerospace, Automotive, Toolpath Generation
 
 ## Timestamps
 
-- **Created:** 2024 
-- **Modified:** 2024 
+- **Created:** 2025-01-01
+- **Modified:** 2026-04-19
 
 ## APIs
 
 ### PowerMill Macro API
-Automation interface using macro commands to control PowerMill operations and workflows
+
+The PowerMill Macro API provides an automation interface using macro commands to control PowerMill operations and workflows for CNC machining automation. Macros can automate repetitive toolpath generation tasks, batch processing of manufacturing data, and integration with post-processors.
 
 **Human URL:** [https://www.autodesk.com/products/powermill/overview](https://www.autodesk.com/products/powermill/overview)
 
-
 #### Tags:
 
- - Macros, Automation, Scripting
+ - Automation, Macros, Scripting, CNC
 
 #### Properties
 
 - [Documentation](https://help.autodesk.com/view/PWRML/2024/ENU/)
-- [API Reference](https://help.autodesk.com/view/PWRML/2024/ENU/?guid=GUID-Macro_Programming)
 
 ### PowerMill Python API
-Python-based API for automating PowerMill processes and customizing workflows
+
+The PowerMill Python API provides a Python-based interface for automating PowerMill processes and customizing machining workflows. The Python API enables programmatic control of toolpath creation, machine simulation, and manufacturing data management within PowerMill.
 
 **Human URL:** [https://www.autodesk.com/products/powermill/overview](https://www.autodesk.com/products/powermill/overview)
 
-
 #### Tags:
 
- - Python, Automation, Scripting, Programming
+ - Automation, Python, Scripting, CNC
 
 #### Properties
 
-- [Documentation](https://help.autodesk.com/view/PWRML/2024/ENU/?guid=GUID-Python_Scripting)
-- [GitHub](https://github.com/Autodesk/)
-- [Examples](https://help.autodesk.com/view/PWRML/2024/ENU/?guid=GUID-Python_Examples)
+- [Documentation](https://help.autodesk.com/view/PWRML/2024/ENU/)
+- [SDK](https://github.com/Autodesk/PowerShell-Suite)
 
-### PowerMill .NET API
-.NET Framework API for integrating PowerMill with custom Windows applications
+### PowerMill .NET / COM API
+
+The PowerMill .NET and COM API provides an object model for integrating PowerMill with Windows applications, ERP systems, and manufacturing execution systems. Enables external applications to drive PowerMill toolpath generation and access machining data programmatically.
 
 **Human URL:** [https://www.autodesk.com/products/powermill/overview](https://www.autodesk.com/products/powermill/overview)
 
-
 #### Tags:
 
- - .NET, Windows, Integration, C#
+ - Automation, COM, .NET, Integration
 
 #### Properties
 
-- [Documentation](https://help.autodesk.com/view/PWRML/2024/ENU/?guid=GUID-NET_API)
-- [SDK](https://www.autodesk.com/developer-network/platform-technologies/powermill)
-
-### PowerMill COM API
-Component Object Model interface for programmatic access to PowerMill functionality
-
-**Human URL:** [https://www.autodesk.com/products/powermill/overview](https://www.autodesk.com/products/powermill/overview)
-
-
-#### Tags:
-
- - COM, Automation, Windows, Legacy
-
-#### Properties
-
-- [Documentation](https://help.autodesk.com/view/PWRML/2024/ENU/?guid=GUID-COM_API)
+- [Documentation](https://help.autodesk.com/view/PWRML/2024/ENU/)
 
 ## Common Properties
 
-- [Developer Portal](https://www.autodesk.com/developer-network)
+- [Website](https://www.autodesk.com/products/powermill/overview)
+- [Documentation](https://help.autodesk.com/view/PWRML/2024/ENU/)
+- [Portal](https://www.autodesk.com/developer-network)
 - [Support](https://www.autodesk.com/support)
-- [Forums](https://forums.autodesk.com/t5/powermill-forum/bd-p/123)
-- [Knowledge Base](https://knowledge.autodesk.com/support/powermill)
-- [Downloads](https://www.autodesk.com/products/powermill/free-trial)
-- [Training](https://www.autodesk.com/training)
-- [Terms of Service](https://www.autodesk.com/company/terms-of-use)
-- [Privacy Policy](https://www.autodesk.com/company/legal-notices-trademarks/privacy-statement)
+- [TermsOfService](https://www.autodesk.com/company/terms-of-use)
+- [PrivacyPolicy](https://www.autodesk.com/company/legal-notices-trademarks/privacy-statement)
+- [GitHubOrganization](https://github.com/autodesk-platform-services)
+
+## Features
+
+| Name | Description |
+|------|-------------|
+| High-Speed Machining | Optimized toolpath strategies for high-speed machining operations including trochoidal milling, constant Z, and rest machining for aerospace and automotive part manufacturing. |
+| 5-Axis Machining | Simultaneous 5-axis toolpath generation for complex sculptured surfaces, undercuts, and deep cavities in mold, die, and aerospace component manufacturing. |
+| Macro Automation | Record and replay macro scripts to automate repetitive CAM programming tasks, standardize manufacturing processes, and reduce programming time for similar part families. |
+| Python Scripting | Python API for programmatic control of toolpath generation, manufacturing data management, and integration with broader manufacturing software ecosystems. |
+| Machine Simulation | Full machine kinematics simulation to verify toolpaths, detect collisions, and validate CNC programs before cutting to prevent costly machine crashes and scrap parts. |
+| Post-Processor Support | Flexible post-processor framework for generating machine-specific G-code output for a wide variety of CNC machines and controllers. |
+
+## Use Cases
+
+| Name | Description |
+|------|-------------|
+| Aerospace Part Machining | Programming complex aerospace structural components, engine parts, and airframe components from titanium, aluminum, and composites with 5-axis machining strategies. |
+| Mold and Die Manufacturing | Generating high-quality toolpaths for injection molds, die casting tools, and stamping dies with complex surface finishes and tight tolerances. |
+| Automotive Prototyping | Rapid prototyping and short-run production of automotive body panels, interior components, and powertrain parts using high-speed machining. |
+| CAM Automation | Automating CAM programming workflows using Python and macro APIs to reduce programming time for families of similar manufacturing parts. |
+| ERP and MES Integration | Integrating PowerMill with ERP and Manufacturing Execution Systems via .NET/COM APIs to automate production scheduling and manufacturing data exchange. |
+
+## Integrations
+
+| Name | Description |
+|------|-------------|
+| Autodesk Inventor | Direct integration with Autodesk Inventor for importing CAD models and associative design-to-manufacturing workflows. |
+| Autodesk Fusion | Integration with Autodesk Fusion for cloud-connected design and manufacturing workflows combining CAD and CAM capabilities. |
+| SAP and ERP Systems | COM/API-based integration with SAP and other ERP systems for production scheduling, work order management, and manufacturing data exchange. |
+| STEP and IGES | Neutral CAD file format support enabling data exchange with any CAD system via STEP and IGES file formats. |
 
 ## Maintainers
 
-**FN:** Autodesk
+**FN:** Kin Lane
 
-**Email:** developer.support@autodesk.com
+**Email:** kin@apievangelist.com
