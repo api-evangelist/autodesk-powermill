@@ -1,0 +1,148 @@
+vocabulary:
+  name: Autodesk PowerMill Vocabulary
+  description: >-
+    Key terminology and concepts used in Autodesk PowerMill, a leading
+    Computer-Aided Manufacturing (CAM) software for 5-axis CNC machining
+    used in aerospace, automotive, mold and die, and precision engineering.
+  version: "1.0"
+  terms:
+
+    - term: Toolpath
+      definition: >-
+        A programmed sequence of coordinates and motions that define the path
+        a cutting tool follows to machine a workpiece from raw material into
+        a finished part.
+      tags:
+        - CAM
+        - CNC
+        - Core
+
+    - term: 5-Axis Machining
+      definition: >-
+        A CNC machining technique where the cutting tool moves simultaneously
+        along five axes (X, Y, Z plus two rotational axes), enabling machining
+        of complex sculptured surfaces, undercuts, and deep cavities in a
+        single setup.
+      tags:
+        - CAM
+        - CNC
+        - Machining
+
+    - term: High-Speed Machining (HSM)
+      definition: >-
+        A set of toolpath strategies optimized for high cutting speeds and
+        feed rates using techniques such as trochoidal milling, constant
+        Z passes, and smooth curvature paths to maximize material removal
+        while protecting the cutting tool.
+      tags:
+        - CAM
+        - Machining
+        - Strategy
+
+    - term: Post-Processor
+      definition: >-
+        A software module that translates generic toolpath data from a CAM
+        system into machine-specific G-code or NC programs tailored to the
+        capabilities and syntax of a particular CNC machine controller.
+      tags:
+        - CAM
+        - CNC
+        - Output
+
+    - term: G-Code
+      definition: >-
+        The standard numerical control programming language used to instruct
+        CNC machines. G-code specifies coordinates, feed rates, spindle
+        speeds, and machine functions. It is the primary output of a
+        post-processor in a CAM workflow.
+      tags:
+        - CNC
+        - Output
+        - Standard
+
+    - term: Macro Script
+      definition: >-
+        A recorded or hand-written sequence of PowerMill commands that
+        automates repetitive CAM programming tasks, batch processes
+        manufacturing data, and standardizes toolpath generation across
+        families of similar parts.
+      tags:
+        - Automation
+        - Scripting
+        - API
+
+    - term: Python API
+      definition: >-
+        The Python-based programming interface for PowerMill that enables
+        programmatic control of toolpath creation, machine simulation, and
+        manufacturing data management. Allows integration with broader
+        manufacturing software ecosystems.
+      tags:
+        - Automation
+        - Python
+        - API
+
+    - term: COM/NET API
+      definition: >-
+        The Component Object Model and .NET object model interface that
+        allows external Windows applications, ERP systems, and Manufacturing
+        Execution Systems to drive PowerMill programmatically for toolpath
+        generation and manufacturing data access.
+      tags:
+        - Automation
+        - Integration
+        - API
+
+    - term: Machine Simulation
+      definition: >-
+        A full kinematics virtual simulation of the CNC machine tool that
+        verifies toolpaths, detects collisions between the tool, holder,
+        fixture, and workpiece, and validates the NC program before any
+        physical cutting takes place.
+      tags:
+        - Verification
+        - Simulation
+        - Safety
+
+    - term: Rest Machining
+      definition: >-
+        A toolpath strategy that identifies and machines only the material
+        left behind (rest material) by a previous larger cutting tool,
+        allowing progressive refinement of a part with increasingly
+        smaller tools.
+      tags:
+        - CAM
+        - Strategy
+        - Machining
+
+    - term: Trochoidal Milling
+      definition: >-
+        A high-speed machining strategy where the tool follows a circular
+        arc path superimposed on a linear feed, maintaining consistent
+        chip load and tool engagement angle to enable aggressive material
+        removal without overloading the cutter.
+      tags:
+        - Strategy
+        - HSM
+        - Machining
+
+    - term: Workpiece
+      definition: >-
+        The raw material block or near-net-shape part that is being machined
+        in the CNC manufacturing process. The workpiece geometry defines the
+        stock material from which toolpaths remove material.
+      tags:
+        - Manufacturing
+        - Core
+        - Geometry
+
+    - term: Manufacturing Execution System (MES)
+      definition: >-
+        A computerized system used to track, document, and control the
+        transformation of raw materials into finished goods on the shop
+        floor. PowerMill integrates with MES via .NET/COM APIs to automate
+        production scheduling and NC program management.
+      tags:
+        - Integration
+        - Manufacturing
+        - Enterprise

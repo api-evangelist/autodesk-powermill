@@ -1,0 +1,105 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "mfg": "https://www.autodesk.com/vocabulary/manufacturing#",
+    "cam": "https://www.autodesk.com/vocabulary/cam#",
+
+    "PowerMill": {
+      "@id": "mfg:PowerMill",
+      "@type": "schema:SoftwareApplication"
+    },
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "industry": "schema:industry",
+    "applicationCategory": "schema:applicationCategory",
+    "operatingSystem": "schema:operatingSystem",
+    "softwareVersion": "schema:softwareVersion",
+
+    "Toolpath": {
+      "@id": "cam:Toolpath",
+      "@type": "cam:ManufacturingEntity",
+      "comment": "A programmed path that a cutting tool follows to machine a workpiece"
+    },
+    "CNCMachine": {
+      "@id": "cam:CNCMachine",
+      "@type": "cam:ManufacturingEntity",
+      "comment": "Computer Numerical Control machine tool driven by G-code programs"
+    },
+    "MacroScript": {
+      "@id": "cam:MacroScript",
+      "@type": "cam:AutomationEntity",
+      "comment": "A recorded or written script of PowerMill commands for automation"
+    },
+    "PythonAPI": {
+      "@id": "cam:PythonAPI",
+      "@type": "cam:ProgrammingInterface",
+      "comment": "Python-based scripting interface for PowerMill automation"
+    },
+    "DotNetCOMAPI": {
+      "@id": "cam:DotNetCOMAPI",
+      "@type": "cam:ProgrammingInterface",
+      "comment": ".NET and COM object model interface for external application integration"
+    },
+    "PostProcessor": {
+      "@id": "cam:PostProcessor",
+      "@type": "cam:ManufacturingEntity",
+      "comment": "Translator that converts toolpath data into machine-specific G-code"
+    },
+    "GCode": {
+      "@id": "cam:GCode",
+      "@type": "cam:OutputFormat",
+      "comment": "Numerical control programming language output by post-processors"
+    },
+    "FiveAxisMachining": {
+      "@id": "cam:FiveAxisMachining",
+      "@type": "cam:MachiningStrategy",
+      "comment": "Simultaneous five-axis CNC machining for complex sculptured surfaces"
+    },
+    "HighSpeedMachining": {
+      "@id": "cam:HighSpeedMachining",
+      "@type": "cam:MachiningStrategy",
+      "comment": "Optimized toolpath strategies for high material removal rates"
+    },
+    "MachineSimulation": {
+      "@id": "cam:MachineSimulation",
+      "@type": "cam:VerificationEntity",
+      "comment": "Full kinematics simulation to verify toolpaths and detect collisions"
+    },
+    "Workpiece": {
+      "@id": "cam:Workpiece",
+      "@type": "cam:ManufacturingEntity",
+      "comment": "The raw material part being machined"
+    },
+    "CuttingTool": {
+      "@id": "cam:CuttingTool",
+      "@type": "cam:ManufacturingEntity",
+      "comment": "The physical tool (end mill, drill, etc.) used to cut material"
+    },
+    "MachiningStrategy": {
+      "@id": "cam:MachiningStrategy",
+      "@type": "cam:ToolpathEntity",
+      "comment": "The algorithmic approach used to generate a toolpath (e.g., raster, trochoidal)"
+    },
+
+    "organization": {
+      "@id": "schema:Organization",
+      "properties": {
+        "name": { "@id": "schema:name" },
+        "url": { "@id": "schema:url" },
+        "industry": { "@id": "schema:industry" },
+        "product": { "@id": "schema:Product" }
+      }
+    },
+
+    "AutodeskPowerMill": {
+      "@id": "mfg:AutodeskPowerMill",
+      "name": "Autodesk PowerMill",
+      "url": "https://www.autodesk.com/products/powermill/overview",
+      "industry": "Computer-Aided Manufacturing (CAM)",
+      "applicationCategory": "CAM Software",
+      "operatingSystem": "Windows"
+    }
+  }
+}
