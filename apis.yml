@@ -82,6 +82,8 @@ apis:
         url: https://help.autodesk.com/view/PWRML/2024/ENU/
 
 common:
+  - type: DomainSecurity
+    url: security/autodesk-powermill-domain-security.yml
   - type: Website
     url: https://www.autodesk.com/products/powermill/overview
   - type: Documentation
