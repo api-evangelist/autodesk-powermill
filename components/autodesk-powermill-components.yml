@@ -1,0 +1,56 @@
+generated: '2026-09-06'
+method: searched
+source: >-
+  https://www.nuget.org/packages/Autodesk.WPFControls.ProductControls.PowerMILL and the
+  Delcam.WPFControls.ProductControls.PowerMILLVB source tree in
+  https://github.com/Autodesk/PowerShapeAndPowerMillAPI
+note: >-
+  These are DESKTOP embedding components, not web/browser components. There is no JavaScript element
+  library, no hosted/prebuilt web surface and no embedded dashboard — PowerMill has no web product.
+families:
+  - family: WPF product host controls
+    platform: .NET / WPF (Windows)
+    description: >-
+      Controls that embed a running PowerMill session inside a host .NET application window, so an
+      ERP/MES or shop-floor application can present PowerMill's viewport in its own UI rather than
+      shelling out to the standalone application.
+    components:
+      - name: Autodesk.WPFControls.ProductControls.PowerMILL
+        kind: wpf-control
+        loader: NuGet package reference
+        package: Autodesk.WPFControls.ProductControls.PowerMILL
+        url: https://www.nuget.org/packages/Autodesk.WPFControls.ProductControls.PowerMILL
+        version: 1.3.9-alpha
+        published: '2026-02-01'
+        official: true
+        source: https://github.com/Autodesk/PowerShapeAndPowerMillAPI
+        source_path: Delcam.WPFControls.ProductControls.PowerMILLVB/DelcamPowerMILLBase.vb
+      - name: DelcamProductHost / DelcamProductBase
+        kind: wpf-control
+        description: >-
+          Shared host/base controls the PowerMill control derives from (also used by the PowerShape
+          equivalent). Distributed inside the same package family.
+        source: https://github.com/Autodesk/PowerShapeAndPowerMillAPI
+        source_path: Delcam.WPFControls.ProductControlsVB/
+        official: true
+      - name: WPF3DViewer
+        kind: wpf-control
+        description: 3D viewer control shipped alongside the product host controls.
+        source: https://github.com/Autodesk/PowerShapeAndPowerMillAPI
+        source_path: Delcam.WPFControls.WPF3DViewerVB/
+        official: true
+  - family: PowerMill add-ins
+    platform: .NET (Windows), loaded by PowerMill itself
+    description: >-
+      PowerMill loads first-party and third-party add-ins that add panes and commands inside the
+      PowerMill UI. Autodesk publishes working add-in source as examples.
+    components:
+      - name: Drilling Automation add-in (example)
+        kind: application-addin
+        source: https://github.com/Autodesk/powermill-api-examples/tree/master/addin-drilling-automation
+        official: true
+        note: Ships an installer project, a WPF pane and the macros it drives; example, not a product.
+      - name: Excel setup sheet add-in (example)
+        kind: application-addin
+        source: https://github.com/Autodesk/powermill-api-examples
+        official: true

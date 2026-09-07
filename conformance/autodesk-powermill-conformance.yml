@@ -1,0 +1,76 @@
+generated: '2026-09-06'
+method: searched
+source: >-
+  help.autodesk.com/view/PWRM/ documentation tree, Autodesk support articles, and the
+  Autodesk/PowerShapeAndPowerMillAPI source repository. No machine-readable API contract exists to
+  derive from — see the contract_discovery block below.
+contract_discovery:
+  openapi: none
+  graphql: none
+  asyncapi: none
+  grpc: none
+  wsdl: none
+  ogc: none
+  probed: '2026-09-06'
+  detail: >-
+    PowerMill exposes no HTTP surface. Its programmable interfaces are (1) macro commands executed
+    inside a running PowerMill session and (2) an in-process .NET/COM object model that drives that
+    session on the same Windows machine. /openapi.json, /swagger.json, /graphql, MCP tools/list,
+    /.well-known/agent-card.json and OGC /conformance were probed against autodesk.com,
+    www.autodesk.com, help.autodesk.com and health.autodesk.com — every one missed.
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: No HTTP API and no OAuth securitySchemes; PowerMill authenticates through the Autodesk desktop licensing client.
+  - id: oidc
+    conforms: false
+    evidence: No /.well-known/openid-configuration on any host probed (404/403, 2026-09-06).
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No HTTP error envelope; the .NET library raises CLR exceptions and macros report errors to the PowerMill session log.
+  - id: json-api
+    conforms: false
+    evidence: No JSON HTTP surface.
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: >-
+      No security.txt served on any Autodesk host probed. Disclosure runs through HackerOne instead —
+      see security/autodesk-powermill-vulnerability-disclosure.yml.
+  - id: rfc8594-sunset-header
+    conforms: false
+    evidence: No HTTP surface; version support is a product policy, not a header contract.
+domain_standards:
+  note: >-
+    REWARD-ONLY and deliberately NOT claimed for scoring. The manufacturing standards below are
+    genuinely supported by the product, but they are supported as FILE FORMATS the application reads
+    and writes — none of them is declared by a machine-readable contract, because PowerMill publishes
+    no contract. contract_declared is false on every row, so this block must not be read as
+    domain-standard conformance in the 0.12.0 sense.
+  entries:
+    - id: iso-10303-step
+      name: ISO 10303 (STEP) CAD model exchange
+      supported: true
+      contract_declared: false
+      evidence: >-
+        https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/How-to-convert-IGES-files-to-a-DMT-file-format-for-machine-simulation-with-PowerMill.html
+        — Autodesk support article covering IGES/STEP import into PowerMill (403 to non-browser
+        clients, 2026-09-06).
+    - id: iges
+      name: IGES (ANSI/US PRO 100) CAD model exchange
+      supported: true
+      contract_declared: false
+      evidence: same Autodesk support article as ISO 10303 above.
+    - id: iso-6983-g-code
+      name: ISO 6983 G-code / NC program output
+      supported: true
+      contract_declared: false
+      evidence: >-
+        PowerMill's post-processor framework generates machine-specific NC output; documented in the
+        PowerMill help tree at https://help.autodesk.com/view/PWRM/2026/ENU/ (HTTP 200, 2026-09-06).
+      note: >-
+        Output is post-processor-specific by design — a controller-dialect G-code, not a claim of
+        strict ISO 6983 conformance.
+compliance_programme:
+  published: true
+  see: security/autodesk-powermill-trust-center.yml
+  note: Autodesk-wide ISO 27001/27017/27018/27701 and SOC 2/SOC 3; scoped to cloud services, not to desktop toolpath computation.

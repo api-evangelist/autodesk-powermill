@@ -1,0 +1,41 @@
+generated: '2026-09-06'
+method: searched
+source: https://help.autodesk.com/view/PWRM/2026/ENU/?contextId=PWRM_RELEASE_NOTES
+docs:
+  release_notes: https://help.autodesk.com/view/PWRM/2026/ENU/?contextId=PWRM_RELEASE_NOTES
+  whats_new: https://help.autodesk.com/view/PWRM/2026/ENU/?guid=GUID-222C6895-9CF5-4060-A6B5-89A2819CDCE9
+  fixed_issues: https://help.autodesk.com/view/PWRM/2026/ENU/?guid=PWRM_RELEASE_NOTES_FIXED_ISSUES_202601
+  current_release_notes: https://help.autodesk.com/view/PWRM/2027/ENU/?contextId=PWRM_RELEASE_NOTES
+scheme: annual-release-train
+current_version: '2027'
+format: >-
+  Per-release "Release notes" and "What's new" pages inside the versioned help site, plus a
+  "Fixed issues" list per point update (e.g. PWRM_RELEASE_NOTES_FIXED_ISSUES_202601 for 2026.0.1).
+  There is no machine-readable feed, no RSS, and no dated single-page changelog.
+entries:
+  - version: '2027'
+    date: null
+    url: https://help.autodesk.com/view/PWRM/2027/ENU/?contextId=PWRM_RELEASE_NOTES
+    breaking: unknown
+    highlights: >-
+      Current documented release; the 2027 help tree is live on help.autodesk.com (HTTP 200,
+      probed 2026-09-06). Individual entry dates are not surfaced on the release-notes index page.
+  - version: '2026'
+    date: '2025-05-13'
+    url: https://help.autodesk.com/view/PWRM/2026/ENU/?contextId=PWRM_RELEASE_NOTES
+    breaking: unknown
+    highlights: >-
+      Release notes page carries the date 13 May 2025 and links a Fixed issues list. Point update
+      2026.0.1 has its own fixed-issues page.
+  - version: '2025'
+    date: null
+    url: https://help.autodesk.com/view/PWRM/2025/ENU/?contextId=PWRM_RELEASE_NOTES
+    breaking: unknown
+  - version: '2024'
+    date: null
+    url: https://help.autodesk.com/view/PWRM/2024/ENU/?contextId=PWRM_RELEASE_NOTES
+    breaking: unknown
+note: >-
+  Recent window only. Dates are recorded ONLY where the provider's own page states one; the release
+  notes index does not publish a date per entry, so most date fields are null rather than inferred
+  from the release year.

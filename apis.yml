@@ -10,28 +10,43 @@ description: >-
   generation, and integrating with broader manufacturing execution systems.
 type: Index
 deliveryModel:
-  model: saas
-  open_source: false
+  model: library
+  open_source: true
   commercial: true
   callable_host: false
-  label: Hosted service · you call their endpoint
-  confidence: medium
+  label: Library · distributed through package registries, no callable service
+  confidence: high
   source:
-  - pricing
-  generated: '2026-08-28'
-  method: derived
+  - https://www.nuget.org/packages/Autodesk.ProductInterface.PowerMILL
+  - https://github.com/Autodesk/PowerShapeAndPowerMillAPI
+  - packages/autodesk-powermill-packages.yml
+  generated: '2026-09-06'
+  method: searched
+  note: >-
+    PowerMill is installed Windows desktop software with no hosted endpoint. Its programmable surface
+    is a local, in-process .NET/COM automation library (MIT licensed, published to NuGet by Autodesk)
+    plus macro commands executed inside a running PowerMill session. The product itself is commercial
+    and licensed per named-user seat; the API library around it is open source. The prior 'saas /
+    Hosted service · you call their endpoint' classification was wrong — there is no endpoint.
 accessModel:
-  pricing: freemium
-  onboarding: unknown
-  trial: false
+  pricing: contact-sales
+  onboarding: sales-assisted
+  trial: true
   try_now: false
   public: false
-  label: Freemium
-  confidence: medium
+  label: Contact sales · 30-day free trial
+  confidence: high
   source:
-  - plans
-  generated: '2026-07-22'
-  method: derived
+  - https://www.autodesk.com/products/powermill/buy
+  - plans/autodesk-powermill-plans-pricing.yml
+  generated: '2026-09-06'
+  method: searched
+  note: >-
+    Autodesk publishes no list price for PowerMill — its own buy page says "Contact your local
+    Autodesk sales team to discuss your business needs and review subscription pricing options."
+    A free 30-day trial is published at https://www.autodesk.com/products/powermill/trial-intake.
+    The prior "freemium" classification was a 2026-07-22 derivation from a scaffolded plans file
+    that asserted a Free tier Autodesk does not offer.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/autodesk-powermill.png
 tags:
   - 5-Axis Machining
@@ -45,7 +60,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/autodesk-powermill/refs/heads/main/apis.yml
 created: '2025-01-01'
-modified: '2026-04-19'
+modified: '2026-09-06'
 specificationVersion: '0.23'
 apis:
   - aid: autodesk-powermill:powermill-macro-api
@@ -64,27 +79,13 @@ apis:
       - CNC
     properties:
       - type: Documentation
-        url: https://help.autodesk.com/view/PWRML/2024/ENU/
-
-  - aid: autodesk-powermill:powermill-python-api
-    name: PowerMill Python API
-    description: >-
-      The PowerMill Python API provides a Python-based interface for automating
-      PowerMill processes and customizing machining workflows. The Python API
-      enables programmatic control of toolpath creation, machine simulation,
-      and manufacturing data management within PowerMill.
-    humanURL: https://www.autodesk.com/products/powermill/overview
-    baseURL: https://local-powermill-instance
-    tags:
-      - Automation
-      - Python
-      - Scripting
-      - CNC
-    properties:
-      - type: Documentation
-        url: https://help.autodesk.com/view/PWRML/2024/ENU/
-      - type: SDKs
-        url: https://github.com/Autodesk/PowerShell-Suite
+        url: https://help.autodesk.com/view/PWRM/2026/ENU/
+      - type: APIReference
+        name: PowerMill Macro Programming Guide (PDF)
+        url: https://damassets.autodesk.net/content/dam/autodesk/external-assets/support-articles/powermill-2024-offline-help-and-macros-and-plugin-documentation/pm-macro-programming-guide.pdf
+      - type: ChangeLog
+        name: PowerMill release notes
+        url: https://help.autodesk.com/view/PWRM/2026/ENU/?contextId=PWRM_RELEASE_NOTES
 
   - aid: autodesk-powermill:powermill-dotnet-com-api
     name: PowerMill .NET / COM API
@@ -102,7 +103,20 @@ apis:
       - Integration
     properties:
       - type: Documentation
-        url: https://help.autodesk.com/view/PWRML/2024/ENU/
+        url: https://help.autodesk.com/view/PWRM/2026/ENU/
+      - type: SourceCode
+        name: Autodesk/PowerShapeAndPowerMillAPI (MIT)
+        url: https://github.com/Autodesk/PowerShapeAndPowerMillAPI
+      - type: Packages
+        url: packages/autodesk-powermill-packages.yml
+      - type: SDKs
+        name: Autodesk.ProductInterface.PowerMILL (NuGet)
+        url: https://www.nuget.org/packages/Autodesk.ProductInterface.PowerMILL
+      - type: Components
+        url: components/autodesk-powermill-components.yml
+      - type: Examples
+        name: Autodesk/powermill-api-examples
+        url: https://github.com/Autodesk/powermill-api-examples
 
 common:
   - type: DomainSecurity
@@ -110,7 +124,7 @@ common:
   - type: Website
     url: https://www.autodesk.com/products/powermill/overview
   - type: Documentation
-    url: https://help.autodesk.com/view/PWRML/2024/ENU/
+    url: https://help.autodesk.com/view/PWRM/2026/ENU/
   - type: Portal
     url: https://www.autodesk.com/developer-network
   - type: Support
@@ -120,7 +134,52 @@ common:
   - type: PrivacyPolicy
     url: https://www.autodesk.com/company/legal-notices-trademarks/privacy-statement
   - type: GitHubOrganization
-    url: https://github.com/autodesk-platform-services
+    url: https://github.com/Autodesk
+  - type: SourceCode
+    name: Autodesk PowerShape and PowerMill API (MIT)
+    url: https://github.com/Autodesk/PowerShapeAndPowerMillAPI
+  - type: APIReference
+    name: PowerMill Macro Programming Guide
+    url: https://damassets.autodesk.net/content/dam/autodesk/external-assets/support-articles/powermill-2024-offline-help-and-macros-and-plugin-documentation/pm-macro-programming-guide.pdf
+  - type: Pricing
+    url: https://www.autodesk.com/products/powermill/buy
+  - type: SignUp
+    url: https://accounts.autodesk.com/
+  - type: Packages
+    url: packages/autodesk-powermill-packages.yml
+  - type: SDKs
+    name: First-party NuGet automation libraries
+    url: packages/autodesk-powermill-packages.yml
+  - type: Components
+    url: components/autodesk-powermill-components.yml
+  - type: Lifecycle
+    url: lifecycle/autodesk-powermill-lifecycle.yml
+  - type: StatusPage
+    name: Autodesk Health Dashboard
+    url: https://health.autodesk.com/
+  - type: ChangeLog
+    name: PowerMill release notes
+    url: changelog/autodesk-powermill-changelog.yml
+  - type: VulnerabilityDisclosure
+    url: security/autodesk-powermill-vulnerability-disclosure.yml
+  - type: Security
+    name: Autodesk vulnerability disclosure programme
+    url: https://hackerone.com/autodesk
+  - type: TrustCenter
+    url: security/autodesk-powermill-trust-center.yml
+  - type: Compliance
+    name: Autodesk Trust Center compliance
+    url: https://www.autodesk.com/trust/compliance
+  - type: Conformance
+    url: conformance/autodesk-powermill-conformance.yml
+  - type: LLMsTxt
+    url: llms/autodesk-powermill-llms.txt
+  - type: Plans
+    url: plans/autodesk-powermill-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/autodesk-powermill-rate-limits.yml
+  - type: Vocabulary
+    url: vocabulary/autodesk-powermill-vocabulary.yml
   - type: Features
     data:
       - name: High-Speed Machining
@@ -198,3 +257,9 @@ maintainers:
     email: kin@apievangelist.com
 x-parent: autodesk
 x-relationship: product
+
+x-enrichment:
+  date: '2026-09-06'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v3

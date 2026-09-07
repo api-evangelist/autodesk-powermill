@@ -1,0 +1,62 @@
+generated: '2026-09-06'
+method: searched
+source: >-
+  help.autodesk.com/view/PWRM/<year>/ENU/ release-notes tree, the Autodesk Health Dashboard, and the
+  Autodesk available-product-versions policy referenced from Autodesk's own HackerOne programme.
+versioning:
+  scheme: annual-release-train
+  pattern: PowerMill <YYYY>[.<minor>.<patch>]
+  current: '2027'
+  docs: https://help.autodesk.com/view/PWRM/2027/ENU/
+  note: >-
+    PowerMill ships as a named yearly product release (2024, 2025, 2026, 2027) with in-year point
+    updates numbered <year>.<minor>.<patch> (e.g. 2026.0.1). Documentation is versioned by the same
+    year key on help.autodesk.com. There is no HTTP API and therefore no URI/header API versioning.
+  observed_versions:
+    - {version: '2027', docs: 'https://help.autodesk.com/view/PWRM/2027/ENU/', http_status: 200}
+    - {version: '2026', docs: 'https://help.autodesk.com/view/PWRM/2026/ENU/', http_status: 200}
+    - {version: '2025', docs: 'https://help.autodesk.com/view/PWRM/2025/ENU/', http_status: 200}
+    - {version: '2024', docs: 'https://help.autodesk.com/view/PWRM/2024/ENU/', http_status: 200}
+deprecation:
+  policy_url: https://www.autodesk.com/support/account/manage/versions/previous-versions
+  sunset_header: false
+  policy_kind: product-version-availability
+  supported_prior_versions: 3
+  supported_prior_versions_quote: >-
+    "Your PowerMill subscription gives you access to install and use the 3 previous versions."
+    (https://www.autodesk.com/products/powermill/buy)
+  note: >-
+    Autodesk publishes an available-product-versions policy that governs which prior releases remain
+    installable, and its security programme treats unsupported/unpatched desktop versions as
+    explicitly out of scope. That is a real, published version-support boundary, but it is a PRODUCT
+    lifecycle policy, not an API deprecation policy — no operation-level deprecation notice, no
+    Sunset/Deprecation headers, no per-interface removal schedule is published.
+  evidence:
+    - url: https://www.autodesk.com/support/account/manage/versions/previous-versions
+      http_status: 403
+      fetched: '2026-09-06'
+      detail: >-
+        Cited by URL inside Autodesk's own HackerOne policy text as the reference for deprecated
+        versions. www.autodesk.com returns 403 to non-browser clients (bot policy).
+status_page: https://health.autodesk.com/
+status_page_detail:
+  platform: Atlassian Statuspage
+  api: https://health.autodesk.com/api/v2/status.json
+  component_count: 283
+  probed: '2026-09-06'
+  http_status: 200
+  relevance_to_powermill: >-
+    PowerMill itself is desktop software and has no component on the dashboard. The component it
+    depends on is "Identity, Licensing & Entitlement", which gates PowerMill sign-in and licensing;
+    "Autodesk account" and "Autodesk App Store" are also listed. Recorded as an Autodesk-wide status
+    surface, not a PowerMill service status.
+sla:
+  published: false
+  note: No API SLA is published; PowerMill is licensed seat software, not a hosted service.
+deprecated_operations: []
+api_surface_note: >-
+  There is no machine-readable API contract to derive deprecated operations from. PowerMill's
+  programmable surfaces are (1) macro commands executed inside a PowerMill session and (2) the
+  Autodesk.ProductInterface.PowerMILL .NET/COM automation library, whose lifecycle is tracked on
+  NuGet — see packages/autodesk-powermill-packages.yml, where the newest STABLE build is 1.2.5
+  (2024-04-05) while the head is 1.3.9-alpha (2026-02-01).

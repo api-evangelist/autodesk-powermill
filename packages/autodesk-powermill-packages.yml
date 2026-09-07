@@ -1,0 +1,86 @@
+generated: '2026-09-06'
+method: searched
+source: >-
+  NuGet registry metadata (api.nuget.org registration index + azuresearch-usnc query API)
+  and the first-party source repository github.com/Autodesk/PowerShapeAndPowerMillAPI
+note: >-
+  PowerMill has no HTTP API and therefore no HTTP client SDKs. Its programmable surface is a
+  local .NET/COM automation library that drives an installed PowerMill session on the same
+  Windows machine. Autodesk publishes that library as open source (MIT) and ships it to NuGet
+  under the "Autodesk Inc" publisher account. Registry search for "powermill" returns exactly
+  two packages, both first-party; searches of PyPI (powermill, pypowermill, autodesk-powermill),
+  npm (powermill, @autodesk/powermill), and RubyGems return nothing. The PyPI package "pymill"
+  is unrelated (a Paymill payments client).
+packages:
+  - language: dotnet
+    registry: nuget
+    name: Autodesk.ProductInterface.PowerMILL
+    url: https://www.nuget.org/packages/Autodesk.ProductInterface.PowerMILL
+    install: dotnet add package Autodesk.ProductInterface.PowerMILL
+    official: true
+    publisher: Autodesk Inc
+    version: 1.3.9-alpha
+    published: '2026-02-01'
+    latest_stable_version: 1.2.5
+    latest_stable_published: '2024-04-05'
+    first_published: '2018-01-19'
+    release_count: 111
+    total_downloads: 77719
+    license: MIT
+    source_code: https://github.com/Autodesk/PowerShapeAndPowerMillAPI
+    description: >-
+      The .NET object model (PMAutomation and the PM* entity collections) that starts, drives and
+      queries an installed PowerMill session over COM. This is the library the apis.yml
+      "PowerMill .NET / COM API" entry describes.
+    currency_note: >-
+      The newest published build is a pre-release (1.3.9-alpha, 2026-02-01); the newest STABLE
+      build is 1.2.5 from 2024-04-05. Consumers pinning to stable are two years behind the
+      library's own head, which tracks PowerMill's annual release train.
+  - language: dotnet
+    registry: nuget
+    name: Autodesk.WPFControls.ProductControls.PowerMILL
+    url: https://www.nuget.org/packages/Autodesk.WPFControls.ProductControls.PowerMILL
+    install: dotnet add package Autodesk.WPFControls.ProductControls.PowerMILL
+    official: true
+    publisher: Autodesk Inc
+    version: 1.3.9-alpha
+    published: '2026-02-01'
+    latest_stable_version: 1.2.5
+    latest_stable_published: '2024-04-05'
+    first_published: '2018-01-19'
+    release_count: 111
+    total_downloads: 66257
+    license: MIT
+    source_code: https://github.com/Autodesk/PowerShapeAndPowerMillAPI
+    description: >-
+      WPF control that embeds/hosts a PowerMill session inside a host .NET application window.
+      Catalogued in components/ as well, as an embeddable UI surface.
+repositories:
+  - name: PowerShapeAndPowerMillAPI
+    url: https://github.com/Autodesk/PowerShapeAndPowerMillAPI
+    official: true
+    owner: Autodesk
+    license: MIT
+    language: C#
+    default_branch: master
+    created: '2018-01-18'
+    last_push: '2026-02-01'
+    stars: 51
+    note: Source for both NuGet packages above; ships a Documentation.chm API reference in-repo.
+  - name: powermill-api-examples
+    url: https://github.com/Autodesk/powermill-api-examples
+    official: true
+    owner: Autodesk
+    license: NOASSERTION
+    language: C#
+    default_branch: master
+    last_push: '2021-08-26'
+    stars: 25
+    note: >-
+      Sample add-ins built on the PowerMill API (drilling automation, Excel setup sheet, exports
+      to Vericut/NCSimul/ViMill). Unmaintained since 2021-08-26.
+registries_checked:
+  - {registry: nuget, query: powermill, hits: 2}
+  - {registry: pypi, queries: [powermill, pypowermill, autodesk-powermill], hits: 0}
+  - {registry: npm, queries: [powermill, "@autodesk/powermill"], hits: 0}
+  - {registry: rubygems, queries: [powermill], hits: 0}

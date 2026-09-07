@@ -1,0 +1,234 @@
+generated: '2026-09-06'
+method: probed
+source: live GET of each named /.well-known path on every host the record knows
+note: 'Autodesk PowerMill is desktop CAM software with no HTTP API host, so the probed host set is the
+  registrable domain, www, the documentation host help.autodesk.com and the Autodesk status host health.autodesk.com.
+  Every named path missed on every host. www.autodesk.com and autodesk.com sit behind an Akamai bot policy
+  that answers 403 to non-browser clients on many paths; that is an edge policy, not a served document,
+  and it is recorded as the status it returned. NO WellKnown or SecurityTxt pointer is emitted: this file
+  records an absence, not a presence. The one 200 encountered (a security.txt on health.autodesk.com)
+  is Atlassian''s, served by the Statuspage platform Autodesk''s dashboard runs on, and is rejected on
+  ownership grounds.'
+hit_count: 0
+hosts:
+- host: https://autodesk.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog.json
+    status: 403
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+  - path: /.well-known/ucp.json
+    status: 403
+    file: null
+  - path: /.well-known/acp.json
+    status: 403
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 403
+    file: null
+  - path: /.well-known/apis.json
+    status: 403
+    file: null
+  - path: /apis.json
+    status: 403
+    file: null
+  - path: /apis.yml
+    status: 403
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+  hit_count: 0
+  path_echo_control: pass
+  negative_control:
+    path: /.well-known/autodesk-powermill-negative-control-7f3ab91c.json
+    status: 403
+    bytes: 461
+    result: pass
+- host: https://www.autodesk.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+    file: null
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+  - path: /.well-known/api-catalog.json
+    status: 403
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+  - path: /.well-known/ucp.json
+    status: 403
+    file: null
+  - path: /.well-known/acp.json
+    status: 403
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 403
+    file: null
+  - path: /.well-known/apis.json
+    status: 403
+    file: null
+  - path: /apis.json
+    status: 403
+    file: null
+  - path: /apis.yml
+    status: 403
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+  hit_count: 0
+  path_echo_control: pass
+  negative_control:
+    path: /.well-known/autodesk-powermill-negative-control-7f3ab91c.json
+    status: 403
+    bytes: 461
+    result: pass
+- host: https://help.autodesk.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  hit_count: 0
+  path_echo_control: pass
+  negative_control:
+    path: /.well-known/autodesk-powermill-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 196
+    result: pass
+- host: https://health.autodesk.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: '200, but the body is ATLASSIAN''s security.txt (Contact: security@atlassian.com, atlassian.com/trust/security/report-a-vulnerability).
+      health.autodesk.com is a hosted Atlassian Statuspage; the document belongs to the hosting vendor,
+      not to Autodesk. NOT counted as a hit and NOT saved — see security/autodesk-powermill-vulnerability-disclosure.yml
+      for Autodesk''s own program.'
+    owner: atlassian.com (Statuspage vendor) — not Autodesk
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  hit_count: 0
+  path_echo_control: pass
+  negative_control:
+    path: /.well-known/autodesk-powermill-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 0
+    result: pass
