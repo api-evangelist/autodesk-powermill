@@ -10,24 +10,20 @@ description: >-
   generation, and integrating with broader manufacturing execution systems.
 type: Index
 deliveryModel:
-  model: library
-  open_source: true
+  model: saas
+  license_evidence:
+    not_product:
+    - autodesk/powershapeandpowermillapi
+  open_source: unknown
   commercial: true
   callable_host: false
-  label: Library · distributed through package registries, no callable service
-  confidence: high
+  label: Hosted service · you call their endpoint
+  confidence: low
   source:
-  - https://www.nuget.org/packages/Autodesk.ProductInterface.PowerMILL
-  - https://github.com/Autodesk/PowerShapeAndPowerMillAPI
-  - packages/autodesk-powermill-packages.yml
-  generated: '2026-09-06'
-  method: searched
-  note: >-
-    PowerMill is installed Windows desktop software with no hosted endpoint. Its programmable surface
-    is a local, in-process .NET/COM automation library (MIT licensed, published to NuGet by Autodesk)
-    plus macro commands executed inside a running PowerMill session. The product itself is commercial
-    and licensed per named-user seat; the API library around it is open source. The prior 'saas /
-    Hosted service · you call their endpoint' classification was wrong — there is no endpoint.
+  - pricing
+  - repository-not-product
+  generated: '2026-09-25'
+  method: derived
 accessModel:
   pricing: contact-sales
   onboarding: sales-assisted
