@@ -115,6 +115,8 @@ apis:
         url: https://github.com/Autodesk/powermill-api-examples
 
 common:
+  - type: FinOps
+    url: finops/autodesk-powermill-finops.yml
   - type: DomainSecurity
     url: security/autodesk-powermill-domain-security.yml
   - type: Website
