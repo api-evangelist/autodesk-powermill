@@ -90,3 +90,25 @@ editions_evidence:
     http_status: 403
     fetched: '2026-09-06'
     detail: Autodesk's own "Feature comparison between different PowerMill variants" article; edition names Standard and Ultimate.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - seat
+  plans:
+  - name: PowerMill Standard
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - seat
+    periods: []
+  - name: PowerMill Ultimate
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - seat
+    periods: []
