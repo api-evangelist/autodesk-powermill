@@ -1,0 +1,58 @@
+edges:
+- partner_name: NuGet Gallery
+  partner: nuget
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (.NET)
+  evidence: https://www.nuget.org/packages/Autodesk.ProductInterface.PowerMILL
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: NuGet Gallery (public registry JSON)
+    spec_file: null
+    language: .NET
+    packages:
+    - name: Autodesk.ProductInterface.PowerMILL
+      version: 1.3.9-alpha
+      released: '2026-02-01'
+      released_field: published
+      lapsed: false
+      page: https://www.nuget.org/packages/Autodesk.ProductInterface.PowerMILL
+      repo_leg: github-org:autodesk
+      publisher_leg: org:autodesk
+      matched_by: github-org
+    - name: Autodesk.WPFControls.ProductControls.PowerMILL
+      version: 1.3.9-alpha
+      released: '2026-02-01'
+      released_field: published
+      lapsed: false
+      page: https://www.nuget.org/packages/Autodesk.WPFControls.ProductControls.PowerMILL
+      repo_leg: github-org:autodesk
+      publisher_leg: org:autodesk
+      matched_by: github-org
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
+generated: '2026-10-18'
+method: searched
+source:
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
+checked:
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
