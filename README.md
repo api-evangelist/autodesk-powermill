@@ -1,4 +1,4 @@
-# Autodesk PowerMill (autodesk-powermill)
+# Autodesk PowerMill
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,106 +66,127 @@
 
 Autodesk PowerMill is a leading CAM (Computer-Aided Manufacturing) software solution for high-speed and 5-axis CNC machining. It is used by aerospace, automotive, mold and die, and precision engineering industries to generate toolpaths for complex part manufacturing. PowerMill provides multiple programming interfaces including Macro scripts, Python API, and .NET/COM interfaces for automating manufacturing workflows, customizing toolpath generation, and integrating with broader manufacturing execution systems.
 
-**URL:** [https://raw.githubusercontent.com/api-evangelist/autodesk-powermill/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/autodesk-powermill/refs/heads/main/apis.yml)
+**Areas:** 5-Axis Machining · CAM · CNC · Machining · Manufacturing · Aerospace · Automotive · Toolpath Generation
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Autodesk PowerMill on APIs.io
 
-## Tags:
+Everything profiled for Autodesk PowerMill is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/autodesk-powermill/](https://apis.io/providers/autodesk-powermill/)** — or go straight to one of the APIs or properties below.
 
- - 5-Axis Machining, CAM, CNC, Machining, Manufacturing, Aerospace, Automotive, Toolpath Generation
+### APIs (2)
 
-## Timestamps
+- [PowerMill Macro API](https://apis.io/apis/autodesk-powermill/powermill-macro-api/) — The PowerMill Macro API provides an automation interface using macro commands to control PowerMill operations and workflows for CNC machining automation.…
+- [PowerMill .NET / COM API](https://apis.io/apis/autodesk-powermill/powermill-dotnet-com-api/) — The PowerMill .NET and COM API provides an object model for integrating PowerMill with Windows applications, ERP systems, and manufacturing execution…
 
-- **Created:** 2025-01-01
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### PowerMill Macro API
+#### JSON-LD (1)
 
-The PowerMill Macro API provides an automation interface using macro commands to control PowerMill operations and workflows for CNC machining automation. Macros can automate repetitive toolpath generation tasks, batch processing of manufacturing data, and integration with post-processors.
+Linked-data contexts for the provider's vocabulary.
 
-**Human URL:** [https://www.autodesk.com/products/powermill/overview](https://www.autodesk.com/products/powermill/overview)
+- [Autodesk Powermill Context](https://apis.io/jsonld/autodesk-powermill/autodesk-powermill-context/)
 
-#### Tags:
+#### Vocabulary (1)
 
- - Automation, Macros, Scripting, CNC
+The provider's domain terms, defined.
 
-#### Properties
+- [Autodesk PowerMill Vocabulary](https://apis.io/vocabularies/autodesk-powermill/autodesk-powermill-vocabulary/)
 
-- [Documentation](https://help.autodesk.com/view/PWRML/2024/ENU/)
+#### Security (3)
 
-### PowerMill Python API
+Authentication, trust centre, and vulnerability disclosure.
 
-The PowerMill Python API provides a Python-based interface for automating PowerMill processes and customizing machining workflows. The Python API enables programmatic control of toolpath creation, machine simulation, and manufacturing data management within PowerMill.
+- [Autodesk Powermill Domain Security](https://apis.io/security/autodesk-powermill/autodesk-powermill-domain-security/)
+- [Autodesk Powermill Trust Center](https://apis.io/security/autodesk-powermill/autodesk-powermill-trust-center/)
+- [Autodesk Powermill Vulnerability Disclosure](https://apis.io/security/autodesk-powermill/autodesk-powermill-vulnerability-disclosure/)
 
-**Human URL:** [https://www.autodesk.com/products/powermill/overview](https://www.autodesk.com/products/powermill/overview)
+#### Plans and pricing (1)
 
-#### Tags:
+Published plans, tiers and prices.
 
- - Automation, Python, Scripting, CNC
+- [Autodesk Powermill Plans Pricing](https://apis.io/plans/autodesk-powermill/autodesk-powermill-plans-pricing/)
 
-#### Properties
+#### Rate limits (1)
 
-- [Documentation](https://help.autodesk.com/view/PWRML/2024/ENU/)
-- [SDK](https://github.com/Autodesk/PowerShell-Suite)
+Published request limits.
 
-### PowerMill .NET / COM API
+- [Autodesk Powermill Rate Limits](https://apis.io/rate-limits/autodesk-powermill/autodesk-powermill-rate-limits/)
 
-The PowerMill .NET and COM API provides an object model for integrating PowerMill with Windows applications, ERP systems, and manufacturing execution systems. Enables external applications to drive PowerMill toolpath generation and access machining data programmatically.
+#### FinOps (1)
 
-**Human URL:** [https://www.autodesk.com/products/powermill/overview](https://www.autodesk.com/products/powermill/overview)
+What the API costs to run, by operation.
 
-#### Tags:
+- [Autodesk Powermill Finops](https://apis.io/finops/autodesk-powermill/autodesk-powermill-finops/)
 
- - Automation, COM, .NET, Integration
+## Where to find this API
 
-#### Properties
-
-- [Documentation](https://help.autodesk.com/view/PWRML/2024/ENU/)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.autodesk.com/products/powermill/overview)
-- [Documentation](https://help.autodesk.com/view/PWRML/2024/ENU/)
-- [Portal](https://www.autodesk.com/developer-network)
+- [Documentation](https://help.autodesk.com/view/PWRM/2026/ENU/)
+- [API reference](https://damassets.autodesk.net/content/dam/autodesk/external-assets/support-articles/powermill-2024-offline-help-and-macros-and-plugin-documentation/pm-macro-programming-guide.pdf)
+- [Pricing](https://www.autodesk.com/products/powermill/buy)
+- [Sign up](https://accounts.autodesk.com/)
 - [Support](https://www.autodesk.com/support)
-- [TermsOfService](https://www.autodesk.com/company/terms-of-use)
-- [PrivacyPolicy](https://www.autodesk.com/company/legal-notices-trademarks/privacy-statement)
-- [GitHubOrganization](https://github.com/autodesk-platform-services)
+- [Security](https://hackerone.com/autodesk)
+- [Compliance](https://www.autodesk.com/trust/compliance)
+- [Terms of service](https://www.autodesk.com/company/terms-of-use)
+- [Privacy policy](https://www.autodesk.com/company/legal-notices-trademarks/privacy-statement)
+- [GitHub](https://github.com/Autodesk)
+- [Status](https://health.autodesk.com/)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| High-Speed Machining | Optimized toolpath strategies for high-speed machining operations including trochoidal milling, constant Z, and rest machining for aerospace and automotive part manufacturing. |
-| 5-Axis Machining | Simultaneous 5-axis toolpath generation for complex sculptured surfaces, undercuts, and deep cavities in mold, die, and aerospace component manufacturing. |
-| Macro Automation | Record and replay macro scripts to automate repetitive CAM programming tasks, standardize manufacturing processes, and reduce programming time for similar part families. |
-| Python Scripting | Python API for programmatic control of toolpath generation, manufacturing data management, and integration with broader manufacturing software ecosystems. |
-| Machine Simulation | Full machine kinematics simulation to verify toolpaths, detect collisions, and validate CNC programs before cutting to prevent costly machine crashes and scrap parts. |
-| Post-Processor Support | Flexible post-processor framework for generating machine-specific G-code output for a wide variety of CNC machines and controllers. |
+**Kin Score 45.4** — developing · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 21.2 |
+| Contract governance | 13.6 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 81.6 |
 
-| Name | Description |
-|------|-------------|
-| Aerospace Part Machining | Programming complex aerospace structural components, engine parts, and airframe components from titanium, aluminum, and composites with 5-axis machining strategies. |
-| Mold and Die Manufacturing | Generating high-quality toolpaths for injection molds, die casting tools, and stamping dies with complex surface finishes and tight tolerances. |
-| Automotive Prototyping | Rapid prototyping and short-run production of automotive body panels, interior components, and powertrain parts using high-speed machining. |
-| CAM Automation | Automating CAM programming workflows using Python and macro APIs to reduce programming time for families of similar manufacturing parts. |
-| ERP and MES Integration | Integrating PowerMill with ERP and Manufacturing Execution Systems via .NET/COM APIs to automate production scheduling and manufacturing data exchange. |
+**Agent readiness 3.8** — human-only
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
 
-| Name | Description |
-|------|-------------|
-| Autodesk Inventor | Direct integration with Autodesk Inventor for importing CAD models and associative design-to-manufacturing workflows. |
-| Autodesk Fusion | Integration with Autodesk Fusion for cloud-connected design and manufacturing workflows combining CAD and CAM capabilities. |
-| SAP and ERP Systems | COM/API-based integration with SAP and other ERP systems for production scheduling, work order management, and manufacturing data exchange. |
-| STEP and IGES | Neutral CAD file format support enabling data exchange with any CAD system via STEP and IGES file formats. |
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
 
-## Maintainers
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/autodesk-powermill/](https://apis.io/providers/autodesk-powermill/).
 
-**FN:** Kin Lane
+## How this profile is made
 
-**Email:** kin@apievangelist.com
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Autodesk PowerMill: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/autodesk-powermill/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
