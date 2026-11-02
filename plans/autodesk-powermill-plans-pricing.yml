@@ -1,0 +1,114 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Autodesk PowerMill
+providerId: autodesk-powermill
+created: '2026-05-04'
+modified: '2026-09-06'
+generated: '2026-09-06'
+method: searched
+source: https://www.autodesk.com/products/powermill/buy
+tags:
+  - CAM
+  - CNC
+  - Machining
+  - Manufacturing
+  - Pricing
+  - Subscription
+description: >-
+  PowerMill is licensed as named-user seat subscription software, not as a metered API. Its
+  programmable interfaces — macro commands and the Autodesk.ProductInterface.PowerMILL .NET/COM
+  automation library — are included with the seat at no additional cost and are not separately
+  priced, quota'd or tiered. There is no API plan, no request quota and no overage: an automation
+  script runs in-process against a licensed PowerMill session on the customer's own machine.
+  This file REPLACES a 2026-05-04 scaffold that asserted a "Free" tier with a 1,000-requests/month
+  quota against https://local-powermill-instance. That tier does not exist and was never published
+  by Autodesk.
+plan_count: 2
+plan_model: seat-subscription
+api_pricing: included-with-seat
+plans:
+  - id: autodesk-powermill-standard
+    name: PowerMill Standard
+    type: subscription
+    unit: named-user seat
+    price: null
+    currency: null
+    billing_periods: [monthly, annual, three-year]
+    description: >-
+      2.5D milling and basic turning, 3-axis and 3+2 programming, toolpath simulation and virtual
+      machine verification. Sold as part of Autodesk Fusion with PowerMill.
+    api_access:
+      included: true
+      metered: false
+      quota: null
+      note: Macro API and .NET/COM automation library are available to any licensed seat.
+  - id: autodesk-powermill-ultimate
+    name: PowerMill Ultimate
+    type: subscription
+    unit: named-user seat
+    price: null
+    currency: null
+    billing_periods: [monthly, annual, three-year]
+    description: >-
+      Everything in Standard plus simultaneous 5-axis machining, offline robot programming,
+      automated electrode production, hybrid manufacturing, and dedicated port / blade / blisk /
+      impeller strategies.
+    api_access:
+      included: true
+      metered: false
+      quota: null
+price_capture:
+  captured: false
+  reason: >-
+    AUTODESK PUBLISHES NO LIST PRICE FOR POWERMILL. Its own buy page answers the question directly:
+    "How much does a PowerMill subscription cost? Contact your local Autodesk sales team to discuss
+    your business needs and review subscription pricing options." Pricing is sales-gated. Third-party
+    resellers and review sites quote figures; a reseller's number is not a provider-published price
+    and recording it here would be a fabrication.
+  quote: >-
+    "How much does a PowerMill subscription cost? Contact your local Autodesk sales team to discuss
+    your business needs and review subscription pricing options."
+  evidence:
+    - {url: 'https://www.autodesk.com/products/powermill/buy', http_status: 403, fetched: '2026-09-06', detail: 'Akamai bot policy returns 403 to non-browser clients; page content read through a text-extraction proxy and confirmed live.'}
+    - {url: 'https://www.autodesk.com/products/powermill/overview', http_status: 403, fetched: '2026-09-06', detail: 'Same page family; title "Autodesk Fusion with PowerMill | Get Prices & Buy PowerMill".'}
+trial:
+  available: true
+  length_days: 30
+  url: https://www.autodesk.com/products/powermill/trial-intake
+  quote: 'Start your project and try PowerMill free for 30 days.'
+  note: Free 30-day trial; longer time-limited versions are arranged through an Autodesk sales representative.
+terms:
+  seats: named-user
+  install_devices: 3
+  concurrent_use: 'Only the named user can sign in and use the software on a single computer at any given time.'
+  refund: '30-day return on annual and multi-year subscriptions; 15-day return on monthly subscriptions.'
+  prior_version_rights: 'A subscription grants the right to install and use the 3 previous versions.'
+  license_agreement: https://www.autodesk.com/company/terms-of-use/en/general-terms
+editions_evidence:
+  - url: https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/PowerMill-product-comparison.html
+    http_status: 403
+    fetched: '2026-09-06'
+    detail: Autodesk's own "Feature comparison between different PowerMill variants" article; edition names Standard and Ultimate.
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - seat
+  plans:
+  - name: PowerMill Standard
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - seat
+    periods: []
+  - name: PowerMill Ultimate
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - seat
+    periods: []
